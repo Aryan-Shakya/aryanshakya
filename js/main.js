@@ -168,19 +168,13 @@ gsap.fromTo('#skills-left', { opacity: 0, x: -40 }, {
   scrollTrigger: { trigger: '#skills', start: 'top 75%' }
 });
 
-// Animate each skill row progressively
-const skillRows = document.querySelectorAll('.skill-row');
-const pcts = [90, 85, 80, 82, 70, 88, 83, 86];
-skillRows.forEach((row, i) => {
-  row.style.setProperty('--pct', pcts[i] + '%');
-  gsap.fromTo(row, { opacity: 0, x: 30 }, {
-    opacity: 1, x: 0,
-    duration: 0.6, delay: i * 0.08, ease: 'power3.out',
-    scrollTrigger: {
-      trigger: '#skills', start: 'top 75%',
-      onEnter: () => setTimeout(() => row.classList.add('animated'), i * 80)
-    }
-  });
+// Animate skill tags
+gsap.fromTo('.skill-tags span', { opacity: 0, y: 20 }, {
+  opacity: 1, y: 0,
+  stagger: 0.06, duration: 0.6, ease: 'power3.out',
+  scrollTrigger: {
+    trigger: '#skills', start: 'top 75%'
+  }
 });
 
 // ── Contact section reveal ────────────────────────────

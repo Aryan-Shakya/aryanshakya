@@ -449,33 +449,24 @@ body.loading { overflow: hidden; }
 .title-dot { color: var(--accent); }
 .skills-right { padding-top: 1rem; }
 
-.skill-row {
-  display: flex; align-items: center; gap: 1.5rem;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--border);
-  transition: border-color 0.3s;
+.skill-tags {
+  display: flex; flex-wrap: wrap; gap: 1rem;
 }
-.skill-row:hover { border-color: var(--accent); }
-.sk-name {
-  font-family: var(--font-d); font-size: 1.05rem; font-weight: 500;
-  min-width: 130px;
+.skill-tags span {
+  font-family: var(--font-d);
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  font-weight: 500;
+  padding: 0.6rem 2rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--dim);
+  transition: color 0.4s, border-color 0.4s, transform 0.4s var(--ease);
 }
-.sk-line {
-  flex: 1; height: 1px; background: var(--border); position: relative;
-  overflow: hidden;
+.skill-tags span:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-5px) rotate(-2deg);
 }
-.sk-line::after {
-  content: ''; position: absolute; top: 0; left: 0;
-  height: 100%; background: var(--accent);
-  width: 0; transition: width 1.2s var(--ease);
-}
-.skill-row.animated .sk-line::after { width: var(--pct, 80%); }
-.sk-pct {
-  font-family: var(--font-m); font-size: 0.7rem;
-  color: var(--dim); letter-spacing: 0.05em;
-  min-width: 35px; text-align: right;
-}
-.sk-pct::after { content: '%'; }
 
 /* ════════════════════════════════════════════
    CONTACT
