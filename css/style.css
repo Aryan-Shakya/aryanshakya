@@ -519,9 +519,10 @@ body.loading { overflow: hidden; }
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 1.5rem;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   border-top: 1px solid var(--border);
-  font-family: var(--font-m); font-size: 0.72rem;
-  letter-spacing: 0.1em; color: var(--dim);
+  font-family: var(--font-m); font-size: 1rem;
+  letter-spacing: 0.05em; color: var(--white);
 }
 .contact-footer a:hover { color: var(--accent); }
 
