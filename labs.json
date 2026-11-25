@@ -17,6 +17,30 @@
       "title": "Basic Artificial Neural Network (ANN) from Scratch",
       "file": "2323l3.py",
       "lines": 148
+    },
+    {
+      "n": 4,
+      "title": "Activation Functions - Sigmoid, ReLU and Tanh",
+      "file": "2323l4.py",
+      "lines": 121
+    },
+    {
+      "n": 5,
+      "title": "Problem-Solving Agent - Vacuum Cleaner Agent",
+      "file": "2323l5.py",
+      "lines": 92
+    },
+    {
+      "n": 6,
+      "title": "Rational Agent Simulation",
+      "file": "2323l6.py",
+      "lines": 87
+    },
+    {
+      "n": 7,
+      "title": "Non-Gradient-Based Optimization - Genetic Algorithm",
+      "file": "2323l7.py",
+      "lines": 110
     }
   ]
 }
