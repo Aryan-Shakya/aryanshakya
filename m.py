@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import urllib.request
@@ -15,6 +16,7 @@ HEADERS = {"User-Agent": "labs-cli/1.0"}
 HELP = """
   N  or  1,3  or  1-3  or  all   download lab(s)
   r N                            download (if needed) and run lab N
+  c N                            copy lab N to the clipboard (no file saved)
   v N                            preview lab N
   any text                       search by title
   l                              list all labs
@@ -93,6 +95,44 @@ def view(lab, count=30):
         print("  | ... %d more lines" % (len(lines) - count))
 
 
+def to_clipboard(text):
+    if sys.platform.startswith("win"):
+        data = b"\xff\xfe" + text.replace("\n", "\r\n").encode("utf-16le")
+        cmd = ["clip"]
+    elif sys.platform == "darwin":
+        data, cmd = text.encode("utf-8"), ["pbcopy"]
+    else:
+        data = text.encode("utf-8")
+        cmd = None
+        for tool in (["wl-copy"], ["xclip", "-selection", "clipboard"], ["xsel", "--clipboard", "--input"]):
+            if shutil.which(tool[0]):
+                cmd = tool
+                break
+        if cmd is None and shutil.which("clip.exe"):
+            data = b"\xff\xfe" + text.replace("\n", "\r\n").encode("utf-16le")
+            cmd = ["clip.exe"]
+        if cmd is None:
+            return False
+    try:
+        return subprocess.run(cmd, input=data, timeout=15).returncode == 0
+    except Exception:
+        return False
+
+
+def copy(lab):
+    text = fetch("/dl/" + lab["file"]).decode("utf-8", "replace").replace("\r\n", "\n")
+    if IN_COLAB:
+        from IPython import get_ipython
+        get_ipython().set_next_input(text)
+        print("  lab %d code is in a new cell below - run that cell" % lab["n"])
+        return
+    if to_clipboard(text):
+        print("  copied %s (%d lines) - paste with Ctrl+V" % (lab["file"], len(text.splitlines())))
+    else:
+        print("  no clipboard tool found (on Linux install xclip or wl-clipboard). Code printed below:\n")
+        print(text)
+
+
 def parse_selection(text, labs):
     by_n = {lab["n"]: lab for lab in labs}
     tokens = text.lower().replace(",", " ").split()
@@ -148,6 +188,10 @@ def execute(line, labs, force=False):
         lab = pick_one(rest, labs)
         if lab:
             view(lab)
+    elif cmd in ("c", "copy", "cp", "clip"):
+        lab = pick_one(rest, labs)
+        if lab:
+            copy(lab)
     elif cmd in ("r", "run"):
         lab = pick_one(rest, labs)
         if lab:
