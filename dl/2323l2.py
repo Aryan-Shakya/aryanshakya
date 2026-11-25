@@ -130,3 +130,13 @@ ax.set_zlabel("PCA 3")
 legend1 = ax.legend(*scatter.legend_elements(), title="Clusters")
 ax.add_artist(legend1)
 plt.show()
+
+# Algorithm
+# 1. Import the libraries and load the Iris dataset; keep the species only for later comparison.
+# 2. Draw a pair plot to understand the relationship between features.
+# 3. Standardise the features with StandardScaler.
+# 4. Run K-Means for k = 2 to 10 and plot the Elbow curve (inertia) and Silhouette score.
+# 5. Apply K-Means with k = 3, print cluster centres and cross-tabulate clusters against species.
+# 6. Apply PCA with two components, print explained variance and component loadings.
+# 7. Plot the clusters and centroids in PCA space beside the actual species.
+# 8. Plot a scree plot and a 3D PCA visualisation of the clusters.
