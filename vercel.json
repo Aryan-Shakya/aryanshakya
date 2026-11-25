@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/l/:n", "destination": "/dl/2323l:n.py" }
+  ]
+}
