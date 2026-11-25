@@ -85,3 +85,16 @@ print("\nActions chosen by the rational agent:\n")
 print(actions_taken)
 print("\nConclusion: the rational agent achieves the highest average utility because it always picks the")
 print("maximum-utility action for the current percept.")
+
+# Algorithm
+# 1. Start the program.
+# 2. Import NumPy, Pandas, Matplotlib and Seaborn.
+# 3. Define actions: CLEAN, MOVE and WAIT.
+# 4. Define the utility function for each action.
+# 5. Create a rational agent that calculates all utilities.
+# 6. Select the action with maximum utility.
+# 7. Test the agent on dirt levels 0.9, 0.2 and 0.0.
+# 8. Plot utility against dirt level.
+# 9. Generate 200 random dirt levels.
+# 10. Compare the rational agent with random and fixed-action agents.
+# 11. Display average utility and conclude.
