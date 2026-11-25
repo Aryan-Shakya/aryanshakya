@@ -119,3 +119,13 @@ plt.show()
 
 print("Gradient after 10 layers -> Sigmoid: %.2e | Tanh: %.2e | ReLU: %.2e" %
       (grad_sigmoid[9], grad_tanh[9], grad_relu[9]))
+
+# Algorithm
+# Memorize these seven steps:
+# 1. Import NumPy, Pandas, Matplotlib and Seaborn.
+# 2. Generate 400 equally spaced input values between -10 and 10.
+# 3. Define Sigmoid, ReLU, Tanh and their derivatives.
+# 4. Plot all three activation functions together and separately.
+# 5. Plot their derivatives and calculate outputs for sample inputs.
+# 6. Create a comparison table containing output range, maximum gradient and zero-centering.
+# 7. Simulate gradients across 1 to 20 layers and demonstrate the vanishing gradient problem.
