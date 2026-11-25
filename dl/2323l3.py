@@ -146,3 +146,14 @@ ax.set_zlabel("PCA 3")
 legend1 = ax.legend(*scatter.legend_elements(), title="Predicted Classes")
 ax.add_artist(legend1)
 plt.show()
+
+# Algorithm
+# Memorize these eight steps:
+# 1. Import the required libraries and load the Iris dataset.
+# 2. One-hot encode the target labels and standardize the input features.
+# 3. Split the dataset into 80% training and 20% testing.
+# 4. Define sigmoid, sigmoid derivative and softmax functions.
+# 5. Initialize weights and biases for the 4-8-3 neural network.
+# 6. Train the network using forward propagation, cross-entropy loss, backpropagation and gradient descent for 500 epochs.
+# 7. Evaluate the network using test accuracy, confusion matrix and classification report.
+# 8. Plot loss, accuracy and 3D PCA visualization.
