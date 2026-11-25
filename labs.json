@@ -11,6 +11,12 @@
       "title": "Unsupervised Learning - K-Means Clustering and PCA",
       "file": "2323l2.py",
       "lines": 132
+    },
+    {
+      "n": 3,
+      "title": "Basic Artificial Neural Network (ANN) from Scratch",
+      "file": "2323l3.py",
+      "lines": 148
     }
   ]
 }
