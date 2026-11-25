@@ -90,3 +90,13 @@ plt.show()
 
 print("Goal reached in all cases:", results_df["Goal Reached"].all())
 print("Average steps:", results_df["Steps"].mean())
+
+# Algorithm
+# Memorize these seven steps:
+# 1. Import the required libraries and define the two-room environment.
+# 2. Define the goal test to check whether both rooms are clean.
+# 3. Define the agent policy to select SUCK, MOVE_RIGHT or MOVE_LEFT.
+# 4. Create run_agent() to simulate the agent for a maximum of 20 steps and record its trace.
+# 5. Run the simulation for both rooms dirty, starting in room A.
+# 6. Test the agent on all eight possible starting states and positions.
+# 7. Calculate performance scores and plot the results.
