@@ -1,0 +1,16 @@
+{
+  "labs": [
+    {
+      "n": 1,
+      "title": "Supervised Learning - Linear Regression",
+      "file": "2323l1.py",
+      "lines": 111
+    },
+    {
+      "n": 2,
+      "title": "Unsupervised Learning - K-Means Clustering and PCA",
+      "file": "2323l2.py",
+      "lines": 132
+    }
+  ]
+}
