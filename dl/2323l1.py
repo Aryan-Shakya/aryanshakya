@@ -109,3 +109,15 @@ prediction = model.predict(sample_scaled)[0]
 
 print("Predicted value:", round(prediction, 2))
 print("Actual value   :", y.iloc[0])
+
+# Algorithm
+# Memorize these nine steps:
+# 1. Import the required Python libraries.
+# 2. Load the built-in Diabetes dataset.
+# 3. Display the dataset and perform exploratory data analysis.
+# 4. Separate input features (X) and target (y).
+# 5. Split the dataset into 80% training and 20% testing.
+# 6. Apply StandardScaler for feature scaling.
+# 7. Train the Linear Regression model using fit().
+# 8. Predict values and evaluate using MAE, MSE, RMSE and R².
+# 9. Visualize the results and predict a new sample.
