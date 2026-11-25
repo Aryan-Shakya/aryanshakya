@@ -95,3 +95,16 @@ plt.legend()
 plt.show()
 
 print("Result: Product A = %.0f units, Product B = %.0f units, Maximum Profit = %.0f" % (x1, x2, -result.fun))
+
+# Algorithm
+# 1. Import required libraries.
+# 2. Define the objective function coefficients.
+# 3. Define constraint matrix A and resource limits b.
+# 4. Define variable bounds.
+# 5. Solve using linprog() with the HiGHS method.
+# 6. Display optimal quantities and maximum profit.
+# 7. Calculate resource usage, slack and utilization.
+# 8. Calculate shadow prices.
+# 9. Find feasible corner points.
+# 10. Plot constraints, feasible region and optimal point.
+# 11. Plot resource utilization.
