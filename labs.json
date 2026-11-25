@@ -41,6 +41,12 @@
       "title": "Non-Gradient-Based Optimization - Genetic Algorithm",
       "file": "2323l7.py",
       "lines": 110
+    },
+    {
+      "n": 8,
+      "title": "Constraint-Based Optimization - Resource Allocation",
+      "file": "2323l8.py",
+      "lines": 97
     }
   ]
 }
