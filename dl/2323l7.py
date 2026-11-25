@@ -108,3 +108,16 @@ plt.title("Population Movement towards the Optimum", fontsize=14)
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# Algorithm
+# 1. Import required libraries.
+# 2. Set GA parameters.
+# 3. Generate random 5-bit chromosomes.
+# 4. Decode binary chromosomes into decimal numbers.
+# 5. Calculate fitness using x^2.
+# 6. Select parents using tournament selection.
+# 7. Perform single-point crossover.
+# 8. Apply bit-flip mutation.
+# 9. Repeat for 30 generations.
+# 10. Display the best chromosome and fitness.
+# 11. Plot fitness convergence and population movement.
