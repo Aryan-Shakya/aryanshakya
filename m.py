@@ -81,7 +81,7 @@ def run(path):
     else:
         if subprocess.call([sys.executable, path]) != 0:
             print("\n  if a module is missing, run:")
-            print("  %s -m pip install numpy pandas matplotlib seaborn scikit-learn" % sys.executable)
+            print("  %s -m pip install numpy pandas matplotlib seaborn scikit-learn scipy" % sys.executable)
 
 
 def view(lab, count=30):
